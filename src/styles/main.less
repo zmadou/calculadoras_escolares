@@ -11,11 +11,10 @@ body {
 
 h1 {
     background-color: @corSecundaria;
+    max-width: 100%;
+    width: 100%;
     padding: 0 1em;
-    border: none;
     color: @corPrincipal;
-    right: inherit;
-    top: inherit;
     overflow: hidden;
     border-top: 3px solid @corPrincipal;
     border-bottom: 3px solid @corPrincipal;
@@ -42,6 +41,7 @@ h1 {
     overflow: hidden;
     text-decoration: none;
     font-family: @fontePrincipal;
+    font-size: 1.6em;
 
     &:hover {
         background: @corSecundaria;
@@ -145,6 +145,14 @@ footer {
 
 
 
+@media (min-width: 769px) and (max-width: 1412px) {
+    .botao-index {
+        width: 100%; 
+        font-size: 1.3em; 
+    }
+}
+
+    
 
 
 @media (max-width: 768px) {
@@ -155,9 +163,6 @@ footer {
     .form-group {
         margin-bottom: 20px;
     }
-}
-
-@media (max-width: 767px) {
     body {
         height: auto;
         min-height: 100%;
@@ -166,4 +171,6 @@ footer {
         position: relative;
         margin-top: 0;
     }
+
+
 }
