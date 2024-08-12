@@ -1,0 +1,169 @@
+@CorFundo: rgb(230, 224, 224);
+@corPrincipal: rgb(246, 139, 24);
+@corSecundaria: #fff8f8;
+@fontePrincipal: "Roboto", sans-serif;
+
+
+
+body {
+    background-color: @CorFundo;
+}
+
+h1 {
+    background-color: @corSecundaria;
+    padding: 0 1em;
+    border: none;
+    color: @corPrincipal;
+    right: inherit;
+    top: inherit;
+    overflow: hidden;
+    border-top: 3px solid @corPrincipal;
+    border-bottom: 3px solid @corPrincipal;
+    padding: 10px;
+    font-family: @fontePrincipal;
+}
+
+
+.botao-index {
+    width: 230px;
+    max-width: 95%;
+    background-color: @corPrincipal;
+    color: @corSecundaria;
+    border: none;
+    position: relative;
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: @fontePrincipal;
+
+    &:hover {
+        background: @corSecundaria;
+        color: @corPrincipal;
+        &::before,
+        &::after {
+            width: 100%;
+            transition: 800ms ease all;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background: @corPrincipal;
+        transition: 400ms ease all;
+    }
+
+    &::after {
+        right: inherit;
+        top: inherit;
+        left: 0;
+        bottom: 0;
+    }
+
+}
+
+.btn-custom {
+    background-color: @corPrincipal;
+    color: @corSecundaria;
+
+    &:hover {
+        background-color: @corSecundaria;
+        color: @corPrincipal;
+        border-color: @corPrincipal;
+    }
+
+    &.active {
+        background-color: @corSecundaria; 
+        color: @corPrincipal; 
+        border-color: @corPrincipal; 
+    }
+}
+
+
+
+.progress {
+    border:1px solid @corPrincipal;
+
+}
+
+.custom-progress-bar {
+    background-color: @corPrincipal;
+    
+}
+
+
+.info-result {
+    background-color: @corPrincipal;
+    color: @corSecundaria;
+    font-weight: bold;
+}
+
+
+.form-style {
+    display: block;
+    padding: .375rem .75rem;
+    background-color: @corSecundaria;
+    border: 2px solid @corPrincipal;
+    background-clip: padding-box;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    appearance: none;
+    border-radius: .25rem;
+    width: 100%;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    outline: none;
+
+    &:active {
+        box-shadow: 2px 2px 15px @corPrincipal inset;
+    }
+}
+
+
+footer {
+    background-color: @corSecundaria;
+    color: #333;
+    padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .botao-index {
+        width: 100%; 
+        font-size: 0.8em; 
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        height: auto;
+        min-height: 100%;
+    }
+    footer {
+        position: relative;
+        margin-top: 0;
+    }
+}
