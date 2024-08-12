@@ -42,6 +42,7 @@ h1 {
     overflow: hidden;
     text-decoration: none;
     font-family: @fontePrincipal;
+    font-size: 1.5em;
 
     &:hover {
         background: @corSecundaria;
@@ -146,16 +147,13 @@ footer {
 
 
 
-
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1366px) {
     .botao-index {
         width: 100%; 
-        font-size: 0.8em; 
-    }
-    .form-group {
-        margin-bottom: 20px;
+        font-size: 1.2em; 
     }
 }
+
 
 @media (max-width: 767px) {
     body {
@@ -166,4 +164,11 @@ footer {
         position: relative;
         margin-top: 32px;
     }
+    .botao-index {
+        width: 100%; 
+        font-size: 1em; 
+    }
+    .form-group {
+        margin-bottom: 20px;
+}
 }
